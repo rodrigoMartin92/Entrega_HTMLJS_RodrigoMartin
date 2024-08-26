@@ -25,15 +25,17 @@ nav ul li a {
 }
 
 .hero {
-    background-image: url('arquitectura.jpg');
+    background-image: url('Dynamo_Arquitectura.jpg');
+    font-size: 20px;
+    text-shadow: 2px 2px 1px #ffffff;
     background-size: cover;
     background-position: center;
     height: 400px;
-    color: white;
+    color: #000000;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:baseline;
 }
 
 .hero h1 {
