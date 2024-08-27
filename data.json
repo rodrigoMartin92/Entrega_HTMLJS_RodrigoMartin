@@ -1,0 +1,17 @@
+{
+    "Proyecto_1": {
+        "P1_title": "Automatizacion automatica",
+        "P1_description": "Creacion de un plug-in de una barra de Herramientas para la automatizacion de acotado de columnas para Revit",
+        "P1_src": "Imagenes/Proyecto1.jpg"
+    },
+    "Proyecto_2": {
+        "P2_title": "Estructuras Dynamo",
+        "P2_description": "Creacion de una rutina de Dynamo para lograr la realizacion parametrizada de proyectos estructurales",
+        "P2_src": "Imagenes/Proyecto2.jpg"
+    },
+    "Proyecto_3": {
+        "P3_title": "Menu de herramientas",
+        "P3_description": "Creacion de un menu de herramientas Para integrar a Revit, el cual tiene una gran cantidad de opciones que permitiran aumentar el rendimiento de los profesionales en un 100%",
+        "P3_src": "Imagenes/Proyecto3.jpg"
+    }
+}
