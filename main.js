@@ -42,3 +42,37 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mostrar la primera sección por defecto
     showSection('about');
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Mostrar el botón cuando el usuario se desplaza hacia abajo
+window.addEventListener('scroll', () => {
+    const button = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        button.classList.remove('hidden');
+    } else {
+        button.classList.add('hidden');
+    }
+});
+
+// Volver al inicio de la página cuando se haga clic en el botón
+document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.querySelector('form').addEventListener('input', function(e) {
+    const input = e.target;
+    if (input.checkValidity()) {
+        input.style.borderColor = 'green';
+    } else {
+        input.style.borderColor = 'red';
+    }
+});

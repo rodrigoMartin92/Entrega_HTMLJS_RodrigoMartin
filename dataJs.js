@@ -1,6 +1,12 @@
+// Muestra el contenedor de carga
+document.getElementById('loading').classList.remove('hidden');
+
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
+        // Oculta el contenedor de carga
+        document.getElementById('loading').classList.add('hidden');
+
         // Crear los proyectos dinámicamente
         addProject(data.Proyecto_1.P1_src, data.Proyecto_1.P1_title, data.Proyecto_1.P1_description);
         addProject(data.Proyecto_2.P2_src, data.Proyecto_2.P2_title, data.Proyecto_2.P2_description);
@@ -9,6 +15,7 @@ fetch('data.json')
     .catch(error => {
         console.error('Error al cargar el JSON:', error);
     });
+
 
 function addProject(imageSrc, title, description) {
     // Crear el contenedor del proyecto
