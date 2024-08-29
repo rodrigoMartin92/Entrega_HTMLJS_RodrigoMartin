@@ -1,3 +1,4 @@
+
 // Creación de los botones de la barra de navegación
 
 document.addEventListener("DOMContentLoaded", () => {

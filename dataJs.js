@@ -1,5 +1,3 @@
-// Creación de las muestras de proyectos recientes
-
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
@@ -38,4 +36,17 @@ function addProject(imageSrc, title, description) {
     // Añadir el nuevo proyecto a la sección "projects"
     const projectsSection = document.querySelector('.projects');
     projectsSection.appendChild(projectDiv);
+
+    // Añadir evento de clic para expandir/contraer el proyecto
+    projectDiv.addEventListener('click', () => {
+        const isExpanded = projectDiv.classList.contains('expanded');
+        // Cerrar cualquier proyecto expandido
+        document.querySelectorAll('.project.expanded').forEach(expandedProject => {
+            if (expandedProject !== projectDiv) {
+                expandedProject.classList.remove('expanded');
+            }
+        });
+        // Alternar la expansión
+        projectDiv.classList.toggle('expanded', !isExpanded);
+    });
 }
